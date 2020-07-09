@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:build": "tsc -w",
-    "start:run": "nodemon build/index.js",
+    "start:run": "nodemon -r dotenv/config build/index.js dotenv_config_path=./src/configs/.env.development",
     "start": "concurrently npm:start:*"
   },
   "keywords": [],
